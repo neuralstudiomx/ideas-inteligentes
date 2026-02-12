@@ -33,7 +33,7 @@ export function HeroSection() {
       id="inicio"
       className="min-h-screen flex items-center relative pt-40 pb-32"
       style={{
-        background: `linear-gradient(135deg, rgba(14, 45, 107, 0.95), rgba(14, 45, 107, 0.75)), url('https://lugares.inah.gob.mx/sites/default/files/2023-04/Tlaxcala.png')`,
+        background: `linear-gradient(135deg, rgba(51, 78, 132, 0.95), rgba(93, 114, 158, 0.85)), url('/distintivos/FotoStock.png')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",

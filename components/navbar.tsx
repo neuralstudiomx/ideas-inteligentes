@@ -19,16 +19,16 @@ import {
 } from "lucide-react"
 
 const capacitacionSubItems = [
-  { label: "Cursos para personal operativo", icon: Utensils, tabKey: "operativo" },
-  { label: "Cursos para gerentes", icon: Briefcase, tabKey: "gerentes", hasChildren: true },
-  { label: "Cursos para funcionarios publicos", icon: Users, tabKey: "funcionarios" },
-  { label: "Cursos para talleres", icon: Rocket, tabKey: "talleres" },
+  { label: "Personal Operativo", icon: Utensils, tabKey: "operativo" },
+  { label: "Gerentes", icon: Briefcase, tabKey: "gerentes", hasChildren: true },
+  { label: "Funcionarios Públicos", icon: Users, tabKey: "funcionarios" },
+  { label: "Talleres", icon: Rocket, tabKey: "talleres" },
 ]
 
 const gerentesSubItems = [
-  { label: "Productos y Servicios Turisticos", icon: Utensils, tabKey: "operacion" },
+  { label: "Productos y Servicios", icon: Utensils, tabKey: "productos" },
   { label: "Marketing", icon: BarChart3, tabKey: "marketing" },
-  { label: "Administracion de las Finanzas", icon: Calculator, tabKey: "finanzas" },
+  { label: "Finanzas", icon: Calculator, tabKey: "finanzas" },
   { label: "Capital Humano", icon: Users, tabKey: "humano" },
   { label: "Management", icon: Briefcase, tabKey: "management" },
   { label: "Desarrollo Emprendedor", icon: Rocket, tabKey: "emprendedor" },
