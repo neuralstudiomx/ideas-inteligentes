@@ -51,9 +51,9 @@ export function HeroSection() {
           </h1>
 
           <p className="text-lg md:text-xl text-white/95 leading-relaxed mb-8 max-w-3xl">
-            Impulsamos la competitividad y la innovacion a traves de formacion especializada,
-            asesoria estrategica y soluciones creativas que conectan cultura, territorio,
-            productividad, tecnologia y experiencia.
+            Impulsamos la competitividad y la innovación a través de formación especializada, 
+            asesoría estratégica y soluciones creativas que conectan cultura, territorio, 
+            productividad, tecnología y experiencia.
           </p>
 
           {/* Pain cards */}

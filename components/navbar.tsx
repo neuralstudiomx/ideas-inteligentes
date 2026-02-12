@@ -16,6 +16,7 @@ import {
   Briefcase,
   Rocket,
   MessageCircle,
+  MapPin,
 } from "lucide-react"
 
 const capacitacionSubItems = [
@@ -34,27 +35,41 @@ const gerentesSubItems = [
   { label: "Desarrollo Emprendedor", icon: Rocket, tabKey: "emprendedor" },
 ]
 
+const pstSubItems = [
+  { label: "Pueblos Mágicos", icon: MapPin, tabKey: "pueblos" },
+  { label: "Turismo Comunitario", icon: Users, tabKey: "comunitario" },
+  { label: "Implementación Integral", icon: Briefcase, tabKey: "implementacion", hasChildren: true },
+]
+
+const implementacionSubItems = [
+  { label: "Cadenas Productivas", icon: Utensils, tabKey: "cadenas" },
+  { label: "Productos Experienciales", icon: BarChart3, tabKey: "productos" },
+  { label: "Paquetización y RRSS", icon: Calculator, tabKey: "paquetizacion" },
+  { label: "Comercialización", icon: Users, tabKey: "comercializacion" },
+]
+
 const navLinks = [
   { label: "Inicio", href: "/#inicio" },
   { label: "Nosotros", href: "/#nosotros" },
   { label: "Capacitacion", href: "/#capacitacion", hasSubmenu: true },
   { label: "Certificacion", href: "/#certificacion" },
-  { label: "Programa Sectorial", href: "/#pst" },
+  { label: "Programa Sectorial", href: "/#pst", hasSubmenu: true },
   { label: "Marketing y Editorial", href: "/#marketing-editorial" },
   { label: "Casos de Exito", href: "/#casos" },
 ]
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [submenuOpen, setSubmenuOpen] = useState(false)
+  const [submenuOpen, setSubmenuOpen] = useState<string | null>(null) // "capacitacion" or "pst"
   const [gerentesOpen, setGerentesOpen] = useState(false)
+  const [implementacionOpen, setImplementacionOpen] = useState(false)
   const submenuRef = useRef<HTMLLIElement>(null)
   const pathname = usePathname()
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (submenuRef.current && !submenuRef.current.contains(e.target as Node)) {
-        setSubmenuOpen(false)
+        setSubmenuOpen(null)
       }
     }
     document.addEventListener("mousedown", handleClickOutside)
@@ -63,8 +78,9 @@ export function Navbar() {
 
   const handleNavClick = () => {
     setMobileOpen(false)
-    setSubmenuOpen(false)
+    setSubmenuOpen(null)
     setGerentesOpen(false)
+    setImplementacionOpen(false)
   }
 
   return (
@@ -94,13 +110,13 @@ export function Navbar() {
               <li key={link.label} className="relative" ref={submenuRef}>
                 <button
                   type="button"
-                  onClick={() => setSubmenuOpen(!submenuOpen)}
+                  onClick={() => setSubmenuOpen(submenuOpen === link.label ? null : link.label)}
                   className="flex items-center gap-1 px-3 py-2 text-base font-bold text-[var(--navy)] hover:text-[var(--red)] transition-colors rounded-lg whitespace-nowrap"
                 >
                   {link.label}
-                  <ChevronDown className={`h-3.5 w-3.5 transition-transform ${submenuOpen ? "rotate-180" : ""}`} />
+                  <ChevronDown className={`h-3.5 w-3.5 transition-transform ${submenuOpen === link.label ? "rotate-180" : ""}`} />
                 </button>
-                {submenuOpen && (
+                {submenuOpen === link.label && link.label === "Capacitación" && (
                   <div className="absolute top-full left-0 mt-1 w-80 bg-white rounded-xl shadow-xl border border-border py-2 z-50">
                     {capacitacionSubItems.map((sub) => (
                       sub.hasChildren ? (
@@ -144,6 +160,60 @@ export function Navbar() {
                             handleNavClick()
                             window.dispatchEvent(new CustomEvent('changeCapTab', { detail: sub.tabKey }))
                             document.getElementById('capacitacion')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                          }}
+                          className="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-[var(--navy)] hover:bg-muted hover:text-[var(--red)] transition-colors w-full text-left"
+                        >
+                          <sub.icon className="h-4 w-4 text-[var(--blue-light)]" />
+                          {sub.label}
+                        </button>
+                      )
+                    ))}
+                  </div>
+                )}
+                {submenuOpen === link.label && link.label === "Programa Sectorial" && (
+                  <div className="absolute top-full left-0 mt-1 w-80 bg-white rounded-xl shadow-xl border border-border py-2 z-50">
+                    {pstSubItems.map((sub) => (
+                      sub.hasChildren ? (
+                        <div key={sub.tabKey} className="relative">
+                          <button
+                            type="button"
+                            onClick={() => setImplementacionOpen(!implementacionOpen)}
+                            className="flex items-center justify-between gap-3 px-4 py-3 text-sm font-semibold text-[var(--navy)] hover:bg-muted hover:text-[var(--red)] transition-colors w-full text-left"
+                          >
+                            <div className="flex items-center gap-3">
+                              <sub.icon className="h-4 w-4 text-[var(--blue-light)]" />
+                              {sub.label}
+                            </div>
+                            <ChevronDown className={`h-3.5 w-3.5 transition-transform ${implementacionOpen ? "rotate-180" : ""}`} />
+                          </button>
+                          {implementacionOpen && (
+                            <div className="bg-muted/50 py-1">
+                              {implementacionSubItems.map((implSub) => (
+                                <button
+                                  key={implSub.tabKey}
+                                  type="button"
+                                  onClick={() => {
+                                    handleNavClick()
+                                    window.dispatchEvent(new CustomEvent('changePSTTab', { detail: implSub.tabKey }))
+                                    document.getElementById('pst')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                                  }}
+                                  className="flex items-center gap-3 px-6 py-2.5 text-sm font-medium text-[var(--navy)] hover:bg-muted hover:text-[var(--red)] transition-colors w-full text-left"
+                                >
+                                  <implSub.icon className="h-4 w-4 text-[var(--blue-light)]" />
+                                  {implSub.label}
+                                </button>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ) : (
+                        <button
+                          key={sub.tabKey}
+                          type="button"
+                          onClick={() => {
+                            handleNavClick()
+                            window.dispatchEvent(new CustomEvent('changePSTTab', { detail: sub.tabKey }))
+                            document.getElementById('pst')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
                           }}
                           className="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-[var(--navy)] hover:bg-muted hover:text-[var(--red)] transition-colors w-full text-left"
                         >
@@ -200,13 +270,13 @@ export function Navbar() {
                 <div key={link.label}>
                   <button
                     type="button"
-                    onClick={() => setSubmenuOpen(!submenuOpen)}
+                    onClick={() => setSubmenuOpen(submenuOpen === link.label ? null : link.label)}
                     className="flex items-center justify-between w-full px-3 py-3 text-sm font-bold text-[var(--navy)] hover:text-[var(--red)] transition-colors rounded-lg"
                   >
                     {link.label}
-                    <ChevronDown className={`h-4 w-4 transition-transform ${submenuOpen ? "rotate-180" : ""}`} />
+                    <ChevronDown className={`h-4 w-4 transition-transform ${submenuOpen === link.label ? "rotate-180" : ""}`} />
                   </button>
-                  {submenuOpen && (
+                  {submenuOpen === link.label && link.label === "Capacitación" && (
                     <div className="pl-4 flex flex-col gap-0.5">
                       {capacitacionSubItems.map((sub) => (
                         sub.hasChildren ? (
@@ -250,6 +320,60 @@ export function Navbar() {
                               handleNavClick()
                               window.dispatchEvent(new CustomEvent('changeCapTab', { detail: sub.tabKey }))
                               document.getElementById('capacitacion')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                            }}
+                            className="flex items-center gap-3 px-3 py-2.5 text-sm font-semibold text-[var(--text-light)] hover:text-[var(--red)] transition-colors rounded-lg w-full text-left"
+                          >
+                            <sub.icon className="h-4 w-4 text-[var(--blue-light)]" />
+                            {sub.label}
+                          </button>
+                        )
+                      ))}
+                    </div>
+                  )}
+                  {submenuOpen === link.label && link.label === "Programa Sectorial" && (
+                    <div className="pl-4 flex flex-col gap-0.5">
+                      {pstSubItems.map((sub) => (
+                        sub.hasChildren ? (
+                          <div key={sub.tabKey}>
+                            <button
+                              type="button"
+                              onClick={() => setImplementacionOpen(!implementacionOpen)}
+                              className="flex items-center justify-between gap-3 px-3 py-2.5 text-sm font-semibold text-[var(--text-light)] hover:text-[var(--red)] transition-colors rounded-lg w-full text-left"
+                            >
+                              <div className="flex items-center gap-3">
+                                <sub.icon className="h-4 w-4 text-[var(--blue-light)]" />
+                                {sub.label}
+                              </div>
+                              <ChevronDown className={`h-3.5 w-3.5 transition-transform ${implementacionOpen ? "rotate-180" : ""}`} />
+                            </button>
+                            {implementacionOpen && (
+                              <div className="pl-4 flex flex-col gap-0.5">
+                                {implementacionSubItems.map((implSub) => (
+                                  <button
+                                    key={implSub.tabKey}
+                                    type="button"
+                                    onClick={() => {
+                                      handleNavClick()
+                                      window.dispatchEvent(new CustomEvent('changePSTTab', { detail: implSub.tabKey }))
+                                      document.getElementById('pst')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                                    }}
+                                    className="flex items-center gap-3 px-3 py-2 text-sm font-medium text-[var(--text-light)] hover:text-[var(--red)] transition-colors rounded-lg w-full text-left"
+                                  >
+                                    <implSub.icon className="h-4 w-4 text-[var(--blue-light)]" />
+                                    {implSub.label}
+                                  </button>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ) : (
+                          <button
+                            key={sub.tabKey}
+                            type="button"
+                            onClick={() => {
+                              handleNavClick()
+                              window.dispatchEvent(new CustomEvent('changePSTTab', { detail: sub.tabKey }))
+                              document.getElementById('pst')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
                             }}
                             className="flex items-center gap-3 px-3 py-2.5 text-sm font-semibold text-[var(--text-light)] hover:text-[var(--red)] transition-colors rounded-lg w-full text-left"
                           >
