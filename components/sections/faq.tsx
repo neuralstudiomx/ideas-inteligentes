@@ -7,7 +7,7 @@ const faqs = [
   {
     q: "Sus cursos tienen validez oficial?",
     a: "Si, nuestros programas se alinean a la STPS y estandares CONOCER, segun corresponda al proyecto.",
-    prefill: "Hola, me gustaria saber mas sobre la validez oficial de sus cursos y certificaciones.",
+    prefill: "Hola, me gustaría saber más sobre la validez oficial de sus cursos y certificaciones.",
   },
   {
     q: "Trabajan fuera de CDMX?",
@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     q: "Como solicito una cotizacion?",
-    a: 'Da clic en "Solicitar Informacion" en la seccion de tu interes o escribe en el formulario de contacto.',
+    a: 'Da clic en "Solicitar Información" en la sección de tu interés o escribe en el formulario de contacto.',
     prefill: "Hola, me gustaria solicitar una cotizacion para los servicios de Ideas Inteligentes.",
   },
   {

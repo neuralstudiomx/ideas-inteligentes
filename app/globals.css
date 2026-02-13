@@ -50,6 +50,21 @@
   }
 }
 
+@keyframes slideUpShort {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-stats-up {
+  animation: slideUpShort 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 /* Marquee animation */
 @keyframes marquee-scroll {
   0% { transform: translateX(0); }

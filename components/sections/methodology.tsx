@@ -1,23 +1,23 @@
 const steps = [
   {
     num: "01",
-    title: "Diagnostico",
-    desc: "Analisis del territorio, vocacion turistica y mapeo de la cadena de valor.",
+    title: "Diagnóstico",
+    desc: "Análisis del territorio, vocación turística y mapeo de la cadena de valor.",
   },
   {
     num: "02",
-    title: "Diseno",
-    desc: "Creacion de producto turistico experiencial y plan de capacitacion a la medida.",
+    title: "Diseño",
+    desc: "Creación de producto turístico experiencial y plan de capacitación a la medida.",
   },
   {
     num: "03",
-    title: "Implementacion",
-    desc: "Capacitacion in-situ, certificacion de estandares y workshops.",
+    title: "Implementación",
+    desc: "Capacitación in-situ, certificación de estándares y workshops.",
   },
   {
     num: "04",
-    title: "Comercializacion",
-    desc: "Digitalizacion, embudos de venta y promocion en redes sociales.",
+    title: "Comercialización",
+    desc: "Digitalización, embudos de venta y promoción en redes sociales.",
   },
 ]
 
@@ -27,14 +27,14 @@ export function MethodologySection() {
       <div className="mx-auto max-w-[1440px] px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-[var(--red)] font-bold uppercase tracking-widest text-sm block mb-2">
-            Como trabajamos
+            Cómo trabajamos
           </span>
           <h2 className="font-serif text-4xl text-[var(--navy)] mb-4 text-balance">
-            Metodologia de Intervencion Integral
+            Metodología de Intervención Integral
           </h2>
           <p className="text-[var(--text-light)]">
-            Nuestro proceso garantiza resultados medibles, desde el diagnostico hasta la
-            comercializacion digital.
+            Nuestro proceso garantiza resultados medibles, desde el diagnóstico hasta la
+            comercialización digital.
           </p>
         </div>
 

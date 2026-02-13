@@ -14,22 +14,22 @@ const values = [
   {
     icon: Compass,
     title: "Integridad",
-    desc: "Actuamos con transparencia y responsabilidad en cada intervencion.",
+    desc: "Actuamos con transparencia y responsabilidad en cada intervención.",
   },
   {
     icon: UsersRound,
-    title: "Colaboracion",
+    title: "Colaboración",
     desc: "Construimos soluciones con actores locales: gobierno, empresa y comunidad.",
   },
   {
     icon: Lightbulb,
-    title: "Innovacion",
-    desc: "Aplicamos herramientas y metodologias actuales para resultados medibles.",
+    title: "Innovación",
+    desc: "Aplicamos herramientas y metodologías actuales para resultados medibles.",
   },
   {
     icon: BarChart3,
-    title: "Orientacion a resultados",
-    desc: "Priorizamos impacto, productividad y comercializacion real.",
+    title: "Orientación a resultados",
+    desc: "Priorizamos impacto, productividad y comercialización real.",
   },
 ]
 
@@ -43,11 +43,11 @@ export function AboutSection() {
             Sobre la Firma
           </span>
           <h2 className="font-serif text-4xl text-[var(--navy)] mb-4 text-balance">
-            Arquitectos de Experiencias Turisticas
+            Arquitectos de Experiencias Turísticas
           </h2>
           <p className="text-[var(--text-light)]">
-            Mas que consultores, somos aliados estrategicos dedicados a elevar la competitividad de
-            los destinos turisticos en Mexico.
+            Más que consultores, somos aliados estratégicos dedicados a elevar la competitividad de
+            los destinos turísticos en México.
           </p>
         </div>
 
@@ -56,10 +56,10 @@ export function AboutSection() {
           {/* Mission - large */}
           <div className="md:col-span-2 bg-[var(--navy)] text-white rounded-3xl p-10 shadow-xl">
             <Rocket className="h-12 w-12 mb-5" />
-            <h3 className="text-2xl font-extrabold text-white mb-4">Nuestra Mision</h3>
+            <h3 className="text-2xl font-extrabold text-white mb-4">Nuestra Misión</h3>
             <p className="text-lg text-white/90 leading-relaxed">
-              Ofrecer servicios de capacitacion, asesoria y acompanamiento tecnico para impulsar la
-              competitividad de empresas y destinos, generando impactos positivos economicos y
+              Ofrecer servicios de capacitación, asesoría y acompañamiento técnico para impulsar la
+              competitividad de empresas y destinos, generando impactos positivos económicos y
               sociales.
             </p>
           </div>
@@ -97,9 +97,9 @@ export function AboutSection() {
           {/* Vision */}
           <div className="bg-white rounded-3xl p-10 shadow-xl border border-border">
             <Eye className="h-12 w-12 text-[var(--navy)] mb-5" />
-            <h3 className="text-xl font-extrabold text-[var(--navy)] mb-3">Vision Global</h3>
+            <h3 className="text-xl font-extrabold text-[var(--navy)] mb-3">Visión Global</h3>
             <p className="text-[var(--text-light)]">
-              Posicionarnos como la consultora referente para el desarrollo turistico sostenible.
+              Posicionarnos como la consultora referente para el desarrollo turístico sostenible.
             </p>
           </div>
 
@@ -108,7 +108,7 @@ export function AboutSection() {
             <Gem className="h-12 w-12 text-[var(--navy)] mb-5" />
             <h3 className="text-xl font-extrabold text-[var(--navy)] mb-3">Excelencia</h3>
             <p className="text-[var(--text-light)]">
-              Compromiso con la calidad. El cliente es nuestra mayor posesion y superamos sus
+              Compromiso con la calidad. El cliente es nuestra mayor posesión y superamos sus
               expectativas.
             </p>
           </div>

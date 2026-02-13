@@ -7,9 +7,9 @@ const projects = [
     url: "impulsotlaxco.com",
     link: "https://impulsotlaxco.com/",
     img: "/ImpulsoTlaxco.png",
-    tag: "Pueblo Magico",
+    tag: "Pueblo Mágico",
     title: "Tlaxco, Tlaxcala",
-    desc: "Integracion de cadena productiva y diseno de experiencia turistica con oferta local.",
+    desc: "Integración de cadena productiva y diseño de experiencia turística con oferta local.",
     prefill: "Quiero conocer el caso Tlaxco, Tlaxcala.",
   },
   {
@@ -18,17 +18,17 @@ const projects = [
     img: "/Huamantla.png",
     tag: "Desarrollo de Producto",
     title: "Huamantla, Tlaxcala",
-    desc: "Diseno de experiencias y articulacion cultural para comercializacion de producto turistico.",
+    desc: "Diseño de experiencias y articulación cultural para comercialización de producto turístico.",
     prefill: "Quiero conocer el caso Huamantla, Tlaxcala.",
   },
   {
     url: "vivemexicomagico.com.mx",
     link: "",
-    img: "/placeholder.svg",
+    img: "/ViveMexico.png",
     tag: "Plataforma Digital",
-    title: "Vive Mexico Magico",
-    desc: "Ecosistema digital de comercializacion para experiencias y destinos turisticos.",
-    prefill: "Quiero conocer el caso Vive Mexico Magico.",
+    title: "Vive México Mágico",
+    desc: "Ecosistema digital de comercialización para experiencias y destinos turísticos.",
+    prefill: "Quiero conocer el caso Vive México Mágico.",
   },
 ]
 
@@ -50,7 +50,7 @@ export function CasosSection() {
             Trayectoria Probada
           </span>
           <h2 className="font-serif text-4xl text-[var(--navy)] mb-4 text-balance">
-            Casos de Exito
+            Casos de Éxito
           </h2>
           <p className="text-[var(--text-light)]">
             Proyectos destacados con imagen en cada caso.
@@ -77,7 +77,8 @@ export function CasosSection() {
               <div className="relative h-52 overflow-hidden">
                 <img
                   src={project.img || "/placeholder.svg"}
-                  alt={project.title}
+                  alt={`Caso de éxito ${project.title} - Proyecto turístico en México`}
+                  title={`${project.title} - ${project.tag}`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   crossOrigin="anonymous"
                 />

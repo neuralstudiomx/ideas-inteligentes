@@ -5,11 +5,11 @@ import Image from "next/image"
 const menuLinks = [
   { label: "Inicio", href: "/#inicio" },
   { label: "Nosotros", href: "/#nosotros" },
-  { label: "Capacitacion", href: "/#capacitacion" },
-  { label: "Certificacion", href: "/#certificacion" },
+  { label: "Capacitación", href: "/#capacitacion" },
+  { label: "Certificación", href: "/#certificacion" },
   { label: "Programa Sectorial 2025-30", href: "/#pst" },
   { label: "Marketing y Editorial", href: "/#marketing-editorial" },
-  { label: "Casos de Exito", href: "/#casos" },
+  { label: "Casos de Éxito", href: "/#casos" },
 ]
 
 export function Footer() {
@@ -20,15 +20,16 @@ export function Footer() {
           {/* Brand column */}
           <div>
             <Image
-              src="/LogoIdeasInteligentesBlanco.png"
-              alt="Ideas Inteligentes"
+              src="/IdeasInteligentesLogoBlancoV2.png"
+              alt="Ideas Inteligentes - Consultoría y capacitación turística en México"
+              title="Ideas Inteligentes - Competitividad e innovación turística"
               width={200}
               height={50}
               className="mb-6"
             />
             <p className="text-gray-400 text-sm leading-relaxed">
               Transformamos el turismo con ideas inteligentes: impulsamos la competitividad y la
-              innovacion a traves de formacion especializada, asesoria estrategica y soluciones
+              innovación a través de formación especializada, asesoría estratégica y soluciones
               creativas.
             </p>
             <div className="flex gap-4 mt-5">
@@ -66,7 +67,7 @@ export function Footer() {
           {/* Menu column */}
           <div>
             <h4 className="text-white font-extrabold text-base mb-5 inline-block border-b-2 border-[var(--red)] pb-1">
-              Menu
+              Menú
             </h4>
             <ul className="flex flex-col gap-3">
               {menuLinks.map((link) => (

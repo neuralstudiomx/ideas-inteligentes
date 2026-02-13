@@ -90,8 +90,18 @@ Enviado desde ideasinteligentesturismo.com.mx
     );
   } catch (error) {
     console.error('Error enviando correo:', error);
+    
+    // Log más detallado del error
+    if (error instanceof Error) {
+      console.error('Mensaje de error:', error.message);
+      console.error('Stack:', error.stack);
+    }
+    
     return NextResponse.json(
-      { error: 'Error al enviar el mensaje. Intenta de nuevo.' },
+      { 
+        error: 'Error al enviar el mensaje. Verifica tu conexión o intenta de nuevo.',
+        details: error instanceof Error ? error.message : 'Error desconocido'
+      },
       { status: 500 }
     );
   }

@@ -120,7 +120,8 @@ export function CertificacionSection() {
                   <div className="relative w-48 h-48 mb-6">
                     <Image
                       src={distintivo.image}
-                      alt={distintivo.name}
+                      alt={`Distintivo ${distintivo.name} - Certificación turística oficial en México`}
+                      title={`${distintivo.name} - Certificación de calidad turística`}
                       fill
                       className="object-contain"
                     />

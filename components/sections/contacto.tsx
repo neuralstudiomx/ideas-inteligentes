@@ -1,12 +1,13 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { MapPin, Mail, Loader2, CheckCircle, XCircle } from "lucide-react"
 
 export function ContactoSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
+  const formRef = useRef<HTMLFormElement>(null)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -31,15 +32,17 @@ export function ContactoSection() {
 
       if (response.ok) {
         setStatus('success')
-        e.currentTarget.reset()
+        formRef.current?.reset()
+        setTimeout(() => setStatus('idle'), 5000)
       } else {
         const result = await response.json()
         setStatus('error')
-        setErrorMessage(result.error || 'Error al enviar el mensaje')
+        setErrorMessage(result.details || result.error || 'Error al enviar el mensaje')
       }
-    } catch {
+    } catch (error) {
       setStatus('error')
-      setErrorMessage('Error de conexión. Intenta de nuevo.')
+      setErrorMessage('Error de conexión. Verifica tu internet e intenta de nuevo.')
+      console.error('Error en el formulario:', error)
     } finally {
       setIsSubmitting(false)
     }
@@ -106,7 +109,7 @@ export function ContactoSection() {
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+            <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-5">
               <div>
                 <label className="block text-[var(--navy)] font-extrabold text-sm mb-2">
                   Nombre
@@ -141,12 +144,12 @@ export function ContactoSection() {
                   name="asunto"
                   className="w-full px-4 py-3 border border-border rounded-lg font-sans text-foreground focus:outline-none focus:ring-2 focus:ring-[var(--navy)]/20"
                 >
-                  <option>Solicitar Informacion</option>
-                  <option>Capacitacion</option>
-                  <option>Certificacion</option>
+                  <option>Solicitar Información</option>
+                  <option>Capacitación</option>
+                  <option>Certificación</option>
                   <option>Programa Sectorial 2025-30</option>
                   <option>Marketing Digital y Editorial</option>
-                  <option>Casos de Exito</option>
+                  <option>Casos de Éxito</option>
                   <option>Otro</option>
                 </select>
               </div>

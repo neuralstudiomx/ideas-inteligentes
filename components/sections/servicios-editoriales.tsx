@@ -21,7 +21,7 @@ export function ServiciosEditorialesSection() {
             Un bloque, un objetivo
           </h2>
           <p className="text-[var(--text-light)]">
-            Edicion, redaccion y diseno editorial para proyectos turisticos y gubernamentales.
+            Edición, redacción y diseño editorial para proyectos turísticos y gubernamentales.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export function ServiciosEditorialesSection() {
           <div className="flex justify-center relative">
             <button
               type="button"
-              onClick={() => scrollToContact("Solicito informacion sobre Servicios Editoriales.")}
+              onClick={() => scrollToContact("Solicito información sobre Servicios Editoriales.")}
               className="inline-flex items-center justify-center rounded-full bg-[var(--red)] text-white px-8 py-3.5 text-sm font-extrabold uppercase shadow-lg shadow-red-600/30 hover:bg-[var(--red-dark)] hover:-translate-y-1 transition-all"
             >
               Contactar

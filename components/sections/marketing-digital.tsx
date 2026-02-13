@@ -25,22 +25,22 @@ export function MarketingEditorialSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Marketing Digital */}
-          <div className="lg:col-span-2 relative bg-white rounded-3xl shadow-xl p-10 border border-border overflow-hidden">
+          <div className="relative bg-white rounded-3xl shadow-xl p-10 border border-border overflow-hidden">
             <div className="absolute -bottom-16 -right-16 w-44 h-44 rounded-full bg-[var(--red)]/10" />
             <h3 className="font-serif text-2xl text-[var(--navy)] mb-3 relative">
               Marketing Digital
             </h3>
             <p className="text-[var(--text-light)] mb-4 relative">
-              Planificacion y ejecucion con enfoque a resultados y medicion.
+              Planificación y ejecución con enfoque a resultados y medición.
             </p>
             <ul className="flex flex-col gap-3 relative mb-6">
               {[
-                "Gestion de redes sociales (contenido + calendario)",
-                "Pauta digital (Meta/Google) con segmentacion turistica",
-                "Landing pages y embudos de conversion",
-                "Analitica y optimizacion mensual",
+                "Gestión de redes sociales (contenido + calendario)",
+                "Pauta digital (Meta/Google) con segmentación turística",
+                "Landing pages y embudos de conversión",
+                "Analítica y optimización mensual",
               ].map((item) => (
                 <li
                   key={item}
@@ -52,10 +52,10 @@ export function MarketingEditorialSection() {
             </ul>
             <button
               type="button"
-              onClick={() => scrollToContact("Solicito informacion sobre Marketing Digital.")}
+              onClick={() => scrollToContact("Solicito información sobre Marketing Digital.")}
               className="inline-flex items-center justify-center rounded-full bg-[var(--red)] text-white px-8 py-3.5 text-sm font-extrabold uppercase shadow-lg shadow-red-600/30 hover:bg-[var(--red-dark)] hover:-translate-y-1 transition-all relative"
             >
-              Solicitar Informacion
+              Solicitar Información
             </button>
           </div>
 
@@ -66,15 +66,15 @@ export function MarketingEditorialSection() {
               Servicios Editoriales
             </h3>
             <p className="text-[var(--text-light)] mb-4 relative">
-              Apoyo integral para documentos tecnicos, reportes, manuales, guias y material institucional.
+              Apoyo integral para documentos técnicos, reportes, manuales, guías y material institucional.
             </p>
             <ul className="flex flex-col gap-3 relative mb-6">
               {[
-                "Redaccion y correccion de estilo",
-                "Diseno editorial (PDF listo para impresion o web)",
-                "Presentaciones (pitch/diagnostico/planes)",
-                "Diagnostico digital y benchmarking",
-                "Guia de identidad visual para redes",
+                "Redacción y corrección de estilo",
+                "Diseño editorial (PDF listo para impresión o web)",
+                "Presentaciones (pitch/diagnóstico/planes)",
+                "Diagnóstico digital y benchmarking",
+                "Guía de identidad visual para redes",
               ].map((item) => (
                 <li
                   key={item}
@@ -86,7 +86,7 @@ export function MarketingEditorialSection() {
             </ul>
             <button
               type="button"
-              onClick={() => scrollToContact("Solicito informacion sobre Servicios Editoriales.")}
+              onClick={() => scrollToContact("Solicito información sobre Servicios Editoriales.")}
               className="inline-flex items-center justify-center rounded-full bg-[var(--red)] text-white px-8 py-3.5 text-sm font-extrabold uppercase shadow-lg shadow-red-600/30 hover:bg-[var(--red-dark)] hover:-translate-y-1 transition-all relative"
             >
               Contactar
