@@ -5,24 +5,24 @@ import { Plus, Minus, ArrowRight } from "lucide-react"
 
 const faqs = [
   {
-    q: "Sus cursos tienen validez oficial?",
-    a: "Si, nuestros programas se alinean a la STPS y estandares CONOCER, segun corresponda al proyecto.",
+    q: "¿Sus cursos tienen validez oficial?",
+    a: "Sí, nuestros programas se alinean a la STPS y estándares CONOCER, según corresponda al proyecto.",
     prefill: "Hola, me gustaría saber más sobre la validez oficial de sus cursos y certificaciones.",
   },
   {
-    q: "Trabajan fuera de CDMX?",
-    a: "Si, tenemos cobertura nacional y modalidad hibrida (presencial/remoto) segun el alcance.",
+    q: "¿Trabajan fuera de CDMX?",
+    a: "Sí, tenemos cobertura nacional y modalidad híbrida (presencial/remoto) según el alcance.",
     prefill: "Hola, me interesa saber si ofrecen servicios en mi localidad fuera de CDMX.",
   },
   {
-    q: "Como solicito una cotizacion?",
+    q: "¿Cómo solicito una cotización?",
     a: 'Da clic en "Solicitar Información" en la sección de tu interés o escribe en el formulario de contacto.',
-    prefill: "Hola, me gustaria solicitar una cotizacion para los servicios de Ideas Inteligentes.",
+    prefill: "Hola, me gustaría solicitar una cotización para los servicios de Ideas Inteligentes.",
   },
   {
-    q: "Ofrecen capacitacion a la medida?",
-    a: "Si, disenamos programas personalizados segun el perfil del destino, empresa o dependencia.",
-    prefill: "Hola, me interesa un programa de capacitacion a la medida para mi organizacion.",
+    q: "¿Ofrecen capacitación a la medida?",
+    a: "Sí, diseñamos programas personalizados según el perfil del destino, empresa o dependencia.",
+    prefill: "Hola, me interesa un programa de capacitación a la medida para mi organización.",
   },
 ]
 

@@ -30,7 +30,7 @@ export function MethodologySection() {
             Cómo trabajamos
           </span>
           <h2 className="font-serif text-4xl text-[var(--navy)] mb-4 text-balance">
-            Metodología de Intervención Integral
+            Metodología de Intervención Integral en Destinos
           </h2>
           <p className="text-[var(--text-light)]">
             Nuestro proceso garantiza resultados medibles, desde el diagnóstico hasta la

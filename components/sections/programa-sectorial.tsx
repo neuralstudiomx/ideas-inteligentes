@@ -224,7 +224,7 @@ export function ProgramaSectorialSection() {
 
         <div className="bg-white rounded-2xl p-6 md:p-12 shadow-xl">
           {/* Main Tabs */}
-          <div className="flex flex-wrap justify-center gap-3 mb-8 bg-muted p-2.5 rounded-full">
+          <div className="flex flex-wrap justify-center gap-3 mb-8 bg-muted p-2.5 rounded-2xl md:rounded-full">
             {mainTabs.map((tab) => (
               <button
                 key={tab.key}

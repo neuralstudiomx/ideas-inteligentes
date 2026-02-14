@@ -127,9 +127,10 @@ export default function AvisoDePrivacidadPage() {
                     Usted tiene derecho a Acceder, Rectificar, Cancelar u Oponerse al tratamiento de
                     sus datos personales. Para ejercer estos derechos, puede enviar una solicitud al
                     correo:{" "}
-                    <a href="mailto:contacto@ideasinteligentesturismo.com.mx" className="text-[var(--red)] font-bold decoration-[var(--red)] underline underline-offset-4 hover:text-[var(--red-dark)]">
+                    <a href="mailto:contacto@ideasinteligentesturismo.com.mx" className="text-[var(--red)] font-bold decoration-[var(--red)] underline underline-offset-4 hover:text-[var(--red-dark)] break-all">
                       contacto@ideasinteligentesturismo.com.mx
-                    </a> o al domicilio señalado.
+                    </a>{" "}
+                    o al domicilio señalado.
                   </p>
                 </section>
 

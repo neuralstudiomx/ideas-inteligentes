@@ -118,7 +118,7 @@ export function ContactoSection() {
                   type="text"
                   name="nombre"
                   required
-                  placeholder="Tu nombre completo"
+                  placeholder="Nombre Completo / Nombre de la Empresa"
                   className="w-full px-4 py-3 border border-border rounded-lg font-sans text-foreground focus:outline-none focus:ring-2 focus:ring-[var(--navy)]/20"
                 />
               </div>
@@ -162,7 +162,7 @@ export function ContactoSection() {
                   name="mensaje"
                   rows={4}
                   required
-                  placeholder="Como podemos ayudarte?"
+                  placeholder="¿Como podemos ayudarte?"
                   className="w-full px-4 py-3 border border-border rounded-lg font-sans text-foreground focus:outline-none focus:ring-2 focus:ring-[var(--navy)]/20 resize-y"
                 />
               </div>
