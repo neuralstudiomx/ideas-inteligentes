@@ -23,7 +23,7 @@ const projects = [
   },
   {
     url: "vivemexicomagico.com.mx",
-    link: "",
+    link: "https://vivemexicomagico.com.mx/",
     img: "/ViveMexico.png",
     tag: "Plataforma Digital",
     title: "Vive México Mágico",
@@ -50,7 +50,7 @@ export function CasosSection() {
             Trayectoria Probada
           </span>
           <h2 className="font-serif text-4xl text-[var(--navy)] mb-4 text-balance">
-            Casos de Éxito
+            Algunos Casos de Éxito
           </h2>
           <p className="text-[var(--text-light)]">
             Proyectos destacados con imagen en cada caso.

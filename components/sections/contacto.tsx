@@ -57,7 +57,7 @@ export function ContactoSection() {
             <span className="text-[var(--red)] font-extrabold uppercase text-sm tracking-widest block mb-3">
               Contacto
             </span>
-            <h2 className="font-serif text-4xl text-white mb-5">Iniciemos la Conversacion</h2>
+            <h2 className="font-serif text-4xl text-white mb-5">Iniciemos la Conversación</h2>
             <p className="text-white/85 text-lg mb-10">
               Ya sea para capacitar a tu personal o desarrollar un plan maestro, estamos listos.
             </p>
@@ -80,7 +80,7 @@ export function ContactoSection() {
               <div className="flex gap-5">
                 <Mail className="h-6 w-6 text-[var(--red)] shrink-0 mt-1" />
                 <div>
-                  <h4 className="text-white font-extrabold mb-1">Correo Electronico</h4>
+                  <h4 className="text-white font-extrabold mb-1">Correo Electrónico</h4>
                   <p className="text-white/85 text-sm">contacto@ideasinteligentesturismo.com.mx</p>
                 </div>
               </div>
@@ -162,7 +162,7 @@ export function ContactoSection() {
                   name="mensaje"
                   rows={4}
                   required
-                  placeholder="¿Como podemos ayudarte?"
+                  placeholder="¿Cómo podemos ayudarte?"
                   className="w-full px-4 py-3 border border-border rounded-lg font-sans text-foreground focus:outline-none focus:ring-2 focus:ring-[var(--navy)]/20 resize-y"
                 />
               </div>

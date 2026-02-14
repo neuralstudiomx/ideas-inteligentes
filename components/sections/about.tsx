@@ -78,7 +78,7 @@ export function AboutSection() {
               {[
                 { label: "STPS:", desc: "Agente Capacitador Externo (IIC110228-6PA-0013)" },
                 { label: "SECTUR - ICTUR:", desc: "Registro Nacional" },
-                { label: "CONOCER:", desc: "Estandares de Competencia" },
+                { label: "CONOCER:", desc: "Estándares de Competencia" },
                 { label: "COMPRANET:", desc: "Proveedor de Gobierno" },
               ].map((item) => (
                 <li

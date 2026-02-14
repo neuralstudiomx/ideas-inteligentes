@@ -97,7 +97,7 @@ export function CertificacionSection() {
             Certificaciones
           </span>
           <h2 className="font-serif text-4xl md:text-5xl text-[var(--navy)] mb-5">
-            Distintivos y Avales
+            Distintivos
           </h2>
           <p className="text-[var(--text-light)] text-lg max-w-3xl mx-auto">
             Reconocimientos oficiales que garantizan excelencia, calidad y compromiso en el sector turístico mexicano.

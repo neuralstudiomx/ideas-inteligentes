@@ -7,7 +7,7 @@ const menuLinks = [
   { label: "Nosotros", href: "/#nosotros" },
   { label: "Capacitación", href: "/#capacitacion" },
   { label: "Certificación", href: "/#certificacion" },
-  { label: "Programa Sectorial 2025-30", href: "/#pst" },
+  { label: "Programa Sectorial 2025-2030", href: "/#pst" },
   { label: "Marketing y Editorial", href: "/#marketing-editorial" },
   { label: "Casos de Éxito", href: "/#casos" },
 ]

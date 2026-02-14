@@ -218,7 +218,7 @@ export function ProgramaSectorialSection() {
             Servicios al Programa Sectorial
           </h2>
           <p className="text-[var(--text-light)]">
-            Intervenciones orientadas a impulsar competitividad, productividad y comercialización en destinos y empresas.
+            Proveemos de servicios integrales de entrenamiento, asistencia técnica y acompañamiento llave en mano a gobiernos estatales y municipales relacionados con el sector turismo, orientados a cumplir con sus objetivos y líneas de actuación, concluyendo con promoción y comercialización electrónica y mixta de productos turísticos experienciales.
           </p>
         </div>
 
